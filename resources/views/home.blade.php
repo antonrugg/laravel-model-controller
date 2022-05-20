@@ -8,33 +8,24 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="/css/app.css">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-       
-        </style>
+      
     </head>
     <body>
-     
-                
+        <h1>Showing Movies from DB</h1>
+            <main>
                 @foreach($movies as $movie)
                 <article>
-                    <p>{{ $movie['title'] }}</p> 
-                    <p>{{ $movie['original_title'] }}</p>
-                    <p>{{ $movie['nationality'] }}</p>
-                    <p>{{ $movie['date'] }}</p>
-                    <p>{{ $movie['vote'] }}</p>
+                    <h2>Title: {{ $movie['title'] }}</h2> 
+                    <p>Original Title: {{ $movie['original_title'] }}</p>
+                    <p>Nationality: {{ $movie['nationality'] }}</p>
+                    <p>Date: {{ $movie['date'] }}</p>
+                    <p>Vote: {{ $movie['vote'] }}</p>
                 </article>
                 @endforeach
+            </main>
 
                 
             </div>

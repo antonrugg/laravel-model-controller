@@ -13,6 +13,6 @@ class HomeController extends Controller
 
 
 
-        return view('welcome', compact('movies'));
+        return view('home', compact('movies'));
     }
 }
