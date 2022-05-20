@@ -25,9 +25,16 @@
     </head>
     <body>
      
-                <div class="title m-b-md">
-                    {{ $name }}
-                </div>
+                
+                @foreach($movies as $movie)
+                <article>
+                    <p>{{ $movie['title'] }}</p> 
+                    <p>{{ $movie['original_title'] }}</p>
+                    <p>{{ $movie['nationality'] }}</p>
+                    <p>{{ $movie['date'] }}</p>
+                    <p>{{ $movie['vote'] }}</p>
+                </article>
+                @endforeach
 
                 
             </div>

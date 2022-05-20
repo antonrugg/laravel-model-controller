@@ -9,11 +9,10 @@ use App\Movie;
 class HomeController extends Controller
 {
     public function index() {
-        $name = "Antonio";
         $movies = Movie::all();
 
 
 
-        return view('welcome', compact('name'));
+        return view('welcome', compact('movies'));
     }
 }
